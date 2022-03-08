@@ -9,6 +9,8 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
+      <Link to="/">Home</Link>
+      &nbsp; | &nbsp;
       <Link to="/aura/about">About</Link>
       &nbsp; | &nbsp;
       <Link to="/aura/experience">Experience</Link>
