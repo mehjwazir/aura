@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 
 const experienceSchema = new Schema({
-	title: {
+	Restaurant: {
 		type: String,
 		required: true
 	},
@@ -19,7 +19,7 @@ const experienceSchema = new Schema({
 		type: String,
 		required: true
 	},
-	// Photo: {
+	// Image: {
 		
 	// },
 	user: { type: Schema.Types.ObjectId, ref: 'User' },
