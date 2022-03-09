@@ -15,20 +15,21 @@ export default function App() {
 
   return (
     <main className="App">
-      { user ?
-          <>
-            <NavBar user={user} setUser={setUser} />
-            <Routes>
+      {user ?
+        <>
+          <NavBar user={user} setUser={setUser} />
+          <Routes>
             {/* Route components in here */}
             <Route path="/" element={<HomePage />} />
             <Route path="/aura/about" element={<About />} />
             <Route path="/aura/experience" element={<ExperiencePage />} />
             <Route path="/aura/favorites" element={<FavoritesPage />} />
             <Route path="/aura/discover" element={<DiscoverPage />} />
-            </Routes>
-          </>
-          :
-          <AuthPage setUser={setUser} />
+            <Route path="/aura/login" element={<AuthPage />} />
+          </Routes>
+        </>
+        :
+        <AuthPage setUser={setUser} />
       }
     </main>
   );

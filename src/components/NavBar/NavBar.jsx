@@ -21,6 +21,8 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <span>Welcome, {user.name}</span>
       &nbsp; | &nbsp;
+      <Link to="/aura/login">Login</Link>
+      &nbsp; | &nbsp;
       <Link onClick={handleLogOut} to="">Log Out</Link>
     </nav>
   );
