@@ -1,10 +1,12 @@
-const Experience = require('../../models/experience');
+const Experience = require('../../models/experience')
 
 
 module.exports = {
 	create,
 	update,
-	delete: deleteExperience
+	delete: deleteExperience,
+	getAll
+
 }
 
 
@@ -21,15 +23,16 @@ async function update(req, res) {
 	res.json(experience);
 }
 
-
+async function getAll(req, res) {
+	const experiences = await Experience.find({})
+	res.json(experiences);
+}
 
 async function create(req, res) {
-	const experience = new Experience();
-	experience.restaurant = req.body.restaurant;
-	experience.location = req.body.location;
-	experience.website = req.body.website;
-	experience.experience = req.body.experience;
-	await experience.save();
+	const experience = await Experience.create(req.body);
+	console.log(experience);
+	// experience.user = req.body.user;
+	// await experience.save();
 	res.json(experience);
 }
 

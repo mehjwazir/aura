@@ -9,7 +9,7 @@ export default function HomePage() {
 			<div>
 				<h1 className='title'>AURA</h1>
 				<p className='place'>Your next dining adventure awaits..</p>
-				<Link to="/aura/experience/create" className="button btm-sm createbtn">Create Experience</Link>
+				<Link to="/create" className="button btm-sm createbtn">Create Experience</Link>
 			<div>
 					<img src="https://i.imgur.com/W4ska4Z.jpg" alt='img' width={300} className='rectangle-23' />
 			</div>

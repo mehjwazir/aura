@@ -13,7 +13,7 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <Link to="/aura/about">About</Link>
       &nbsp; | &nbsp;
-      <Link to="/aura/experience">Experience</Link>
+      <Link to="/experiences">Experiences</Link>
       &nbsp; | &nbsp;
       <Link to="/aura/discover">Discover</Link>
       &nbsp; | &nbsp;

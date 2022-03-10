@@ -1,25 +1,25 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
 const experienceSchema = new Schema({
-	Restaurant: {
+	restaurant: {
 		type: String,
 		required: true
 	},
-	Location: {
+	location: {
 		type: String,
 		required: false
 	},
-	Website: {
+	website: {
 		type: String,
 		required: false
 	},
-	Experience: {
+	experience: {
 		type: String,
 		required: true
 	},
-	Photos: {
+	photos: {
 		type: [String]
 	},
 	user: { type: Schema.Types.ObjectId, ref: 'User' },

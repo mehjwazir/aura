@@ -19,7 +19,7 @@ export default function ExperiencePage() {
   return (
     <main>
       <h1>Experience Page</h1>
-      <Link to="/aura/experience/create" className="button btn-sm">Create Experience</Link>
+      <Link to="/create" className="button btn-sm">Create Experience</Link>
     
     {/* <div className="container">
       {experience && experience.map((experience) => {
