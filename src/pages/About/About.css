@@ -1,0 +1,20 @@
+.Text {
+	color: gray;
+	font-size: 20px;
+}
+
+.about {
+	color: beige;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.aura {
+	color: lightslategray;
+	font-size: 30px;
+
+}
+
+
+.h3aura {
+	margin-right: 10px;
+}

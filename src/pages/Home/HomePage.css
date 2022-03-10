@@ -1,1 +1,27 @@
+.rectangle-23 {
+ height: 600px;
+ width: 400px;
+  position: absolute;
+  top: 90px;
+  margin-left: 100px;
 
+}
+
+.title {
+  letter-spacing: 14.5px;
+  line-height: 200px;
+  width: 907px;
+}
+
+.place {
+	color: blanchedalmond;
+	font-size: 27px;
+  letter-spacing: 5px;
+ margin-right: 450px; 
+}
+
+.createbtn {
+	margin-top: 35px !important; 
+	margin-right: 75vmin !important; 
+	
+}

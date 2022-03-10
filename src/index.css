@@ -1,5 +1,5 @@
 /* CSS Custom Properties */
-:root {
+/* :root {
   --white: #FFFFFF;
   --tan-1: #FBF9F6;
   --tan-2: #E7E2DD;
@@ -8,7 +8,7 @@
   --orange: #F67F00;
   --text-light: #968c84;
   --text-dark: #615954;
-}
+} */
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -21,7 +21,8 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(114, 124, 125, 1);
+  background: rgb(114,124,125);
+background: linear-gradient(185deg, rgba(114,124,125,1) 1%, rgba(255,255,255,0.01) 100%);
   padding: 2vmin;
   height: 100vh;
 }
