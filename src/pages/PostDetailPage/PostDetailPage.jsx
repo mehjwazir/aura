@@ -1,8 +1,8 @@
 import "./PostDetailPage.css";
 
 
-export detail function PostDetailPage() {
-	
+export function PostDetailPage() {
+
 	
 	
 	
