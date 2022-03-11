@@ -26,9 +26,10 @@ const postSchema = new Schema({
 	photo: {
 		type: [String]
 	},
-	user: { type: Schema.Types.ObjectId, ref: 'User' },
-	userName: String,
-	userAvatar: String
+	user: {
+		type: Schema.Types.ObjectId,
+		ref: 'User'
+	},
 },{
     timestamps: true
 });
