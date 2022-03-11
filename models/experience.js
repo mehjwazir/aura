@@ -7,9 +7,13 @@ const experienceSchema = new Schema({
 		type: String,
 		required: true
 	},
+	Date: {
+		type: String,
+		required: true
+	},
 	location: {
 		type: String,
-		required: false
+		required: true
 	},
 	website: {
 		type: String,

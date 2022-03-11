@@ -9,6 +9,17 @@ module.exports = {
 
 }
 
+async function create(req, res) {
+	const experience = await Experience.create(req.body);
+	console.log(experience);
+	// experience.user = req.body.user;
+	experience.save();
+	res.json(experience);
+}
+
+
+
+
 
 async function deleteExperience(req, res) {
 	await Experience.findByIdAndDelete(req.params.id);
@@ -28,11 +39,5 @@ async function getAll(req, res) {
 	res.json(experiences);
 }
 
-async function create(req, res) {
-	const experience = await Experience.create(req.body);
-	console.log(experience);
-	// experience.user = req.body.user;
-	// await experience.save();
-	res.json(experience);
-}
+
 

@@ -11,9 +11,12 @@ import DiscoverPage from '../Discover/DiscoverPage';
 import { getUser } from '../../utilities/users-service';
 import * as experienceAPI from '../../utilities/experience-api';
 
+//Added photos useState
+
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [experiences, setExperiences] = useState([]);
+  // const [photos, setPhotos] = useState([]);
 
 
   async function createExperience(formData) {
@@ -30,7 +33,7 @@ export default function App() {
     getAllExperience();
   }, []);
 
-
+//Added photos prop
 console.log(experiences)
   return (
     <main className="App">
@@ -42,7 +45,8 @@ console.log(experiences)
             <Route path="/" element={<HomePage />} />
             <Route path="/aura/about" element={<About />} />
             <Route path="/experience" element={<ExperiencePage
-            experiences={experiences}
+              experiences={experiences}
+              // photos={photos}
             />} />
             <Route path="/create" element={<ExperienceForm
             createExperience={createExperience}
