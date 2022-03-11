@@ -5,36 +5,36 @@ import NavBar from '../../components/NavBar/NavBar';
 import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../Home/HomePage'
 import About from '../About/About';
-import ExperienceForm from '../../components/ExperienceForm/ExperienceForm';
-import ExperiencePage from '../Experience/ExperiencePage';
+import PostForm from '../../components/PostForm/PostForm';
+import PostsPage from '../PostsPage/PostsPage';
 import DiscoverPage from '../Discover/DiscoverPage';
 import { getUser } from '../../utilities/users-service';
-import * as experienceAPI from '../../utilities/experience-api';
+import * as postsAPI from '../../utilities/posts-api';
 
 //Added photos useState
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  const [experiences, setExperiences] = useState([]);
+  const [posts, setPosts] = useState([]);
   // const [photos, setPhotos] = useState([]);
 
 
-  async function createExperience(formData) {
+  async function createPost(formData) {
     console.log(formData);
-    const experience = await experienceAPI.create(formData)
-    setExperiences(...experiences, experience)
+    const post = await postsAPI.create(formData)
+    setPosts(...posts, post)
   }
   
   useEffect(function () {
-    async function getAllExperience() {
-      const allExperiences = await experienceAPI.getAll()
-      setExperiences(allExperiences);
+    async function getAllPosts() {
+      const allPosts = await postsAPI.getAll()
+      setPosts(allPosts);
     }
-    getAllExperience();
+    getAllPosts();
   }, []);
 
 //Added photos prop
-console.log(experiences)
+
   return (
     <main className="App">
     { user ?
@@ -44,12 +44,12 @@ console.log(experiences)
             {/* Route components in here */}
             <Route path="/" element={<HomePage />} />
             <Route path="/aura/about" element={<About />} />
-            <Route path="/experience" element={<ExperiencePage
-              experiences={experiences}
+            <Route path="/experience" element={<PostsPage
+              posts={posts}
               // photos={photos}
             />} />
-            <Route path="/create" element={<ExperienceForm
-            createExperience={createExperience}
+            <Route path="/create" element={<PostForm
+            createPost={createPost}
             />} />
             <Route path="/aura/discover" element={<DiscoverPage />} />
             <Route path="/aura/login" element={<AuthPage />} />

@@ -10,9 +10,9 @@
   --text-dark: #615954;
 } */
 
-*, *:before, *:after {
+/* *, *:before, *:after {
   box-sizing: border-box;
-}
+} */
 
 body {
   margin: 0;
@@ -36,9 +36,9 @@ code {
   height: 100%;
 }
 
-.align-ctr {
+ .align-ctr {
   text-align: center;
-}
+} 
 
 .align-rt {
   text-align: right;

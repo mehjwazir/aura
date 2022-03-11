@@ -1,0 +1,8 @@
+.postcard {
+	display: grid;
+    font-size: 23px;
+    width: 20%;
+    height: 100px;
+    background-color: gray;
+    align-items: center;
+}

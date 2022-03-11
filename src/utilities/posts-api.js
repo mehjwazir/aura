@@ -1,17 +1,19 @@
 import { getToken } from './users-service';
+const BASE_URL = '/api/posts';
 
-const BASE_URL = '/api/experience';
 
-
-export function create(experience) {
-  return sendRequest(`${BASE_URL}`, "POST", experience);
+export function create(posts) {
+  return sendRequest(`${BASE_URL}`, "POST", posts);
 }
-
 
 
 export function getAll() {
   return sendRequest(`${BASE_URL}`);
 }
+
+// export function add(postData) {
+//   return sendRequest(BASE_URL, 'POST', postData);
+// }
 
 /*--- Helper Functions ---*/
 

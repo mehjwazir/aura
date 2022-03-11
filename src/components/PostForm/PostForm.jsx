@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import './ExperienceForm.css';
+import './PostForm.css';
 
 
-export default function ExperienceForm({createExperience}) {
+
+export default function PostForm({ createPost}) {
 	const [formData, setFormData] = useState({
 		restaurant: "",
 		Date: "",
@@ -21,7 +22,7 @@ export default function ExperienceForm({createExperience}) {
 	
 	function handleSubmit(evt) {
 		evt.preventDefault();
-		createExperience(formData)
+		createPost(formData)
 		//Added this for image
 		// form.append('photo', fileInputRef.current.files[0]);
 	}
@@ -45,7 +46,7 @@ export default function ExperienceForm({createExperience}) {
 					<input type="text" name="experience" onChange={(evt) => handleChange(evt)} />
 					<label>Upload Photos</label>
 					<input type="file" name="file"  onChange={(evt) => handleChange(evt)} />
-					<button type="submit" className="button btn-sm">Create</button>
+					<button to="/experience" type="submit" className="button btn-sm">Create</button>
 				</form>
 			</div>
 		</div>

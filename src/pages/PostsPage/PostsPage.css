@@ -1,12 +1,12 @@
-/* 
+
    
 .container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-radius: 10px;
 }
 
-.item-card {
+/* .item-card {
   margin: 2vw;
   border-radius: 5px;
   height: 40vh;
