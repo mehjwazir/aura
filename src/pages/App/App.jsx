@@ -30,18 +30,19 @@ export default function App() {
     getAllExperience();
   }, []);
 
+
 console.log(experiences)
   return (
     <main className="App">
-      {user ?
-        <>
-          <NavBar user={user} setUser={setUser} />
-          <Routes>
+    { user ?
+      <>
+      <NavBar user={user} setUser={setUser} />
+          <Routes className="NavBar">
             {/* Route components in here */}
             <Route path="/" element={<HomePage />} />
             <Route path="/aura/about" element={<About />} />
-            <Route path="/experiences" element={<ExperiencePage
-              experiences={experiences}
+            <Route path="/experience" element={<ExperiencePage
+            experiences={experiences}
             />} />
             <Route path="/create" element={<ExperienceForm
             createExperience={createExperience}
