@@ -3,14 +3,21 @@ const BASE_URL = '/api/posts';
 
 
 export function create(posts) {
-  return sendRequest(`${BASE_URL}`, "POST", posts);
+  return sendRequest(`${BASE_URL}/experience`, "POST", posts);
 }
 
 
 export function getAll() {
-  return sendRequest(`${BASE_URL}`);
+  return sendRequest(`${BASE_URL}/discover`);
 }
 
+export function getUsersPost() {
+  return sendRequest(`${BASE_URL}/posts`);
+}
+
+export function deletePost(id) {
+  return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+}
 // export function add(postData) {
 //   return sendRequest(BASE_URL, 'POST', postData);
 // }

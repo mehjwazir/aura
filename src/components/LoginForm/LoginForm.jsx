@@ -29,10 +29,11 @@ export default function LoginForm({ setUser }) {
   }
 
   return (
+    <main className='login-container'>
     <div> 
       <h2 className='welcome'>WELCOME!</h2>
       <p>New to AURA?</p>
-      <div className="form-container">
+        <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Email</label>
           <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
@@ -42,6 +43,7 @@ export default function LoginForm({ setUser }) {
         </form>
       </div>
       <p className="error-message">&nbsp;{error}</p>
-    </div>
+      </div>
+    </main>
   );
 }
