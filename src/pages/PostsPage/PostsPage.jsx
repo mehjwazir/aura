@@ -11,14 +11,14 @@ export default function PostsPage({ setUserPosts, userPosts }) {
  
 
 
-  useEffect(function () {
+  // useEffect(function () {
 
-    async function getAllUsersPost() {
-      const allPosts = await postsAPI.getUsersPost()
-      setUserPosts(allPosts);
-    }
-    getAllUsersPost();
-  }, []);
+  //   async function getAllUsersPost() {
+  //     const allPosts = await postsAPI.getUsersPost()
+  //     setUserPosts(allPosts);
+  //   }
+  //   getAllUsersPost();
+  // }, []);
 
 
   return (

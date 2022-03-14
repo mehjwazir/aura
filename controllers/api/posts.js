@@ -15,6 +15,7 @@ module.exports = {
 
 
 async function create(req, res) {
+	if (!req.body.photo) delete req.body.photo;
 	req.body.user = req.user._id;
 	const post = await Post.create(req.body);
 	console.log(post);

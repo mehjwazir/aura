@@ -5,7 +5,7 @@ import * as postsAPI from '../../utilities/posts-api';
 
 
 
-export default function PostForm({ setUserPosts, setPosts, userPosts, posts}) {
+export default function PostForm({ setUserPosts, setPosts, userPosts, posts }) {
 	const [formData, setFormData] = useState({
 		restaurant: "",
 		date: "",
@@ -13,37 +13,33 @@ export default function PostForm({ setUserPosts, setPosts, userPosts, posts}) {
 		website: "",
 		experience: "",
 		photo: ""
-		
-	}) 
+
+	})
 	const navigate = useNavigate();
+	// const fileInputRef = useRef()
 
 
-	async function createPost(formData) {
-		console.log('not working');
-		console.log(formData);
-		const post = await postsAPI.create(formData)
-		setPosts(...posts, post)
-		setUserPosts(...userPosts, post);
+
+	async function handleSubmit(evt) {
+		evt.preventDefault();
+		const post = await postsAPI.create(formData);
+		setPosts([...posts, post]);
+		setUserPosts([...userPosts, post]);
+		navigate('/experience');
 	}
 
 
 
 	function handleChange(evt) {
-	setFormData({...formData, [evt.target.name]: evt.target.value})
-}
-	
-	function handleSubmit(evt) {
-		evt.preventDefault();
-		createPost(formData)
-		navigate('/experience');
-		
+		setFormData({ ...formData, [evt.target.name]: evt.target.value })
 	}
 
-		//Added this for image
-		// form.append('photo', fileInputRef.current.files[0]);
-	
-	
-	
+
+	//Added this for image
+	// form.append('photo', fileInputRef.current.files[0]);
+
+
+
 	//Added fileinputref for image
 	return (
 		<div>
@@ -61,8 +57,8 @@ export default function PostForm({ setUserPosts, setPosts, userPosts, posts}) {
 					<label>Experience</label>
 					<input type="text" name="experience" onChange={(evt) => handleChange(evt)} />
 					<label>Upload Photos</label>
-					<input type="file" name="file"  onChange={(evt) => handleChange(evt)} />
-					
+					<input type="url" name="photo" onChange={(evt) => handleChange(evt)} />
+
 				</form>
 				<button onClick={(evt) => handleSubmit(evt)} type="submit" className="button btn-sm">Create</button>
 			</div>
@@ -72,3 +68,8 @@ export default function PostForm({ setUserPosts, setPosts, userPosts, posts}) {
 }
 //to add in input for photos
 // ref = { fileInputRef }
+
+
+
+
+

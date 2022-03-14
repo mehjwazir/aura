@@ -24,7 +24,8 @@ const postSchema = new Schema({
 		required: true
 	},
 	photo: {
-		type: [String]
+		type: String,
+		default: 'https://i.imgur.com/W4ska4Z.jpg' // default image
 	},
 	user: {
 		type: Schema.Types.ObjectId,
