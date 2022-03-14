@@ -1,19 +1,31 @@
 import { useState } from 'react';
 import './PostForm.css';
+import { useNavigate } from 'react-router-dom';
+import * as postsAPI from '../../utilities/posts-api';
 
 
 
-export default function PostForm({ createPost, setUserPosts}) {
+export default function PostForm({ setUserPosts, setPosts, userPosts, posts}) {
 	const [formData, setFormData] = useState({
 		restaurant: "",
 		date: "",
 		location: "",
 		website: "",
 		experience: "",
-		// Added this for image
 		photo: ""
 		
 	}) 
+	const navigate = useNavigate();
+
+
+	async function createPost(formData) {
+		console.log('not working');
+		console.log(formData);
+		const post = await postsAPI.create(formData)
+		setPosts(...posts, post)
+		setUserPosts(...userPosts, post);
+	}
+
 
 
 	function handleChange(evt) {
@@ -23,11 +35,13 @@ export default function PostForm({ createPost, setUserPosts}) {
 	function handleSubmit(evt) {
 		evt.preventDefault();
 		createPost(formData)
-	
+		navigate('/experience');
+		
+	}
 
 		//Added this for image
 		// form.append('photo', fileInputRef.current.files[0]);
-	}
+	
 	
 	
 	//Added fileinputref for image

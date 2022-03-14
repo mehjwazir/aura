@@ -7,11 +7,11 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 // POST /api/users
 
-router.get('/discover', postsCtrl.getAll);
-router.post('/experience', postsCtrl.create);
-router.get('/posts', postsCtrl.getAllUserPost)
-router.delete('/:id', postsCtrl.deletePost);
-router.put('/:id', postsCtrl.editPost);
+router.get('/discover', ensureLoggedIn, postsCtrl.getAll);
+router.post('/experience', ensureLoggedIn, postsCtrl.create);
+router.get('/posts', ensureLoggedIn, postsCtrl.getAllUserPost)
+router.delete('/:id', ensureLoggedIn, postsCtrl.deletePost);
+router.put('/:id', ensureLoggedIn, postsCtrl.editPost);
 
 
 

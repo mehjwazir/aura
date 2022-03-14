@@ -23,14 +23,7 @@ export default function App() {
   // const [photos, setPhotos] = useState([]);
  
 
-  async function createPost(formData) {
-    console.log('not working');
-    console.log(formData);
-    const post = await postsAPI.create(formData)
-    setPosts(...posts, post)
-    setUserPosts(...userPosts, post);
-    // navigate('/experience');
-  }
+ 
   
   useEffect(function () {
     async function getAllPosts() {
@@ -60,7 +53,7 @@ export default function App() {
             <Route path="/aura/about" element={<About />} />
             <Route path="/experience" element={<PostsPage userPosts={userPosts} setUserPosts={setUserPosts} />} />
             <Route path="/:id" element={<PostDetailPage posts={posts} setPosts={setPosts} user={user} setUserPosts={setUserPosts} userPosts = {userPosts} />} />
-            <Route path="/create" element={<PostForm createPost={createPost} />} />
+            <Route path="/create" element={<PostForm userPosts={userPosts} setUserPosts={setUserPosts} posts={posts} setPosts={setPosts} />} />
             <Route path="/discover" element={<DiscoverPage posts={posts} />} />
             <Route path="/aura/login" element={<AuthPage />} />
           </Routes>
