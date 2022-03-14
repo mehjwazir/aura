@@ -18,6 +18,12 @@ export function getUsersPost() {
 export function deletePost(id) {
   return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }
+
+export function edit(id, formData) {
+  console.log(id);
+  console.log(formData);
+  return sendRequest(`${BASE_URL}/${id}`, 'PUT', formData);
+}
 // export function add(postData) {
 //   return sendRequest(BASE_URL, 'POST', postData);
 // }

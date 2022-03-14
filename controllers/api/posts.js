@@ -6,6 +6,8 @@ module.exports = {
 	getAll,
 	getAllUserPost,
 	deletePost,
+	editPost,
+	// show
 	
 }
 
@@ -38,7 +40,21 @@ async function getAllUserPost(req, res) {
 
 
 async function deletePost(req,res) {
-   const deletedPost = await Post.findByIdAndDelete(req.params.id).populate("user");
+   const deletedPost = await Post.findByIdAndDelete(req.params.id);
   res.json(deletedPost);
 }
 
+
+
+async function editPost(req,res) {
+	const editPost = await Post.findByIdAndUpdate(req.params.id, req.body, { new: true });
+	console.log('heyyy');
+	console.log(req.body);
+	res.json(editPost);
+	
+}
+
+// async function show(req, res) {
+//   const post = await Post.findById(req.params.id).populate("user");
+//   res.json(post);
+// }

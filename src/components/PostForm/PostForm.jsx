@@ -3,10 +3,10 @@ import './PostForm.css';
 
 
 
-export default function PostForm({ createPost}) {
+export default function PostForm({ createPost, setUserPosts}) {
 	const [formData, setFormData] = useState({
 		restaurant: "",
-		Date: "",
+		date: "",
 		location: "",
 		website: "",
 		experience: "",
@@ -23,6 +23,8 @@ export default function PostForm({ createPost}) {
 	function handleSubmit(evt) {
 		evt.preventDefault();
 		createPost(formData)
+	
+
 		//Added this for image
 		// form.append('photo', fileInputRef.current.files[0]);
 	}
@@ -33,7 +35,7 @@ export default function PostForm({ createPost}) {
 		<div>
 			<div>
 				<h1>Create Experience</h1>
-				<form className='form-container' onSubmit={handleSubmit}>
+				<form className='form-container' >
 					<label>Restaurant</label>
 					<input type="text" name="restaurant" onChange={(evt) => handleChange(evt)} />
 					<label>Date</label>
@@ -46,9 +48,11 @@ export default function PostForm({ createPost}) {
 					<input type="text" name="experience" onChange={(evt) => handleChange(evt)} />
 					<label>Upload Photos</label>
 					<input type="file" name="file"  onChange={(evt) => handleChange(evt)} />
-					<button to="/experience" type="submit" className="button btn-sm">Create</button>
+					
 				</form>
+				<button onClick={(evt) => handleSubmit(evt)} type="submit" className="button btn-sm">Create</button>
 			</div>
+
 		</div>
 	);
 }

@@ -5,8 +5,7 @@ import PostCard from '../../components/PostCard/PostCard';
 
 
 
-export default function PostsPage({ posts }) {
-  
+export default function PostsPage({ userPosts }) {
   
 
   return (
@@ -15,7 +14,7 @@ export default function PostsPage({ posts }) {
       <Link to="/create" className="button btn-sm">Create Experience</Link>
     
     <div className="container">
-      {posts && posts.map((post, idx) => {
+      {userPosts && userPosts.map((post, idx) => {
         
           return <PostCard post={post} key={idx} />;
       })}

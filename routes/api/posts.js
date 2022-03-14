@@ -11,6 +11,7 @@ router.get('/discover', postsCtrl.getAll);
 router.post('/experience', postsCtrl.create);
 router.get('/posts', postsCtrl.getAllUserPost)
 router.delete('/:id', postsCtrl.deletePost);
+router.put('/:id', postsCtrl.editPost);
 
 
 
