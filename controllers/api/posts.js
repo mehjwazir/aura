@@ -33,7 +33,7 @@ async function getAll(req, res) {
 
 
 async function getAllUserPost(req, res) {
-	const posts = await Post.find({ user: req.user._id })
+	const posts = await Post.find({ user: req.user.id })
 	res.json(posts);
 }
 
