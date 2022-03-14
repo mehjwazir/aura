@@ -63,7 +63,7 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 		<div>
 		
 			 <div>
-				<img src={post.photos} alt="img" />
+				<img src={post.photo} alt="img" />
 				<h1>{post.restaurant}</h1>
 				<h6>{post.date}</h6>
 				<h4>{post.location}</h4>
