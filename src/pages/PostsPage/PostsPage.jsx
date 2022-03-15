@@ -7,8 +7,22 @@ import { useEffect } from 'react';
 
 
 
+
 export default function PostsPage({ setUserPosts, userPosts }) {
  
+  useEffect(function () {
+    async function getAllUsersPosts() {
+      const userPosts = await postsAPI.getUsersPost()
+      setUserPosts(userPosts);
+    }
+    getAllUsersPosts();
+
+  }, []);
+
+
+
+
+
 
   return (
     <main>

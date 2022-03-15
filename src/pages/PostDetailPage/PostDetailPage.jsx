@@ -1,7 +1,9 @@
 import "./PostDetailPage.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import * as postsAPI from '../../utilities/posts-api';
+
+
 
 
 
@@ -12,11 +14,10 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 	const [showForm, setShowForm] = useState(false);
 	const [formData, setFormData] = useState(post);
 	const [showDelete, setShowDelete] = useState(false);
+	const navigate = useNavigate();
+	
 
 	async function editPost(id) {
-		console.log('whattt');
-		console.log(id);
-		console.log(formData);
 		const update = await postsAPI.edit(id, formData);
 		const updatedPosts = posts.map((post) => post._id === update._id ? update : post);
 		const updatedUserPosts = userPosts.map((post) => post._id === update._id ? update : post);
@@ -25,39 +26,36 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 	
 	}
 
-
-
-	async function deletePost(id) {
-		const deletePost = await postsAPI.deletePost(id);
-		const updatedPosts = posts.filter(post => post._id !== deletePost._id);
-		setPosts(updatedPosts);
-	}  
-
 	function handleChange(evt) {
 		const newFormData = { ...formData, [evt.target.name]: evt.target.value };
 		setFormData(newFormData);
 	}
 
-	// function handleSubmit(evt) {
-	// 	evt.preventDefault();
-	// 	editPost(post._id);
 
-	// }
+	async function deletePost(id) {
+		const deletePost = await postsAPI.deletePost(id);
+		const updatedPosts = posts.filter(post => post._id !== deletePost._id);
+		console.log('testing', updatedPosts)
+		setPosts(updatedPosts);	
+	}  
 
-
+	
 	function handleDelete(id) {
 		deletePost(id);
+		navigate('/experience');
 	}
 
+
+
 	useEffect(() => {
-		console.log(post);
+		console.log('this is the post', post);
 		if (post.user === user._id)
 			setShowDelete(true);
 
 	},[]);
 
 
-
+	
 
 	return (
 		<div>
@@ -67,9 +65,9 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 				<h1>{post.restaurant}</h1>
 				<h6>{post.date}</h6>
 				<h4>{post.location}</h4>
-				<h5>{post.webiste}</h5>
+				<h5>{post.website}</h5>
 				<h6>{post.experience}</h6>
-				<h2> Created By: {post.user.name}  </h2> 
+				<h2> Created By: {user.name}  </h2> 
 				{showDelete &&
 					<>
 					<button type="submit" onClick={() => handleDelete(post._id)} id="detailDelete"> Delete </button>
@@ -83,7 +81,8 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 			{showForm &&
 			<div>
 				<h1>Edit Post</h1>
-				<form >
+					<form >
+					<label>Restaurant</label>
 					<input type="text" name="restaurant" onChange={(evt) => handleChange(evt)} />
 					<label>Date</label>
 					<input type="text" name="date" onChange={(evt) => handleChange(evt)} />
@@ -94,9 +93,9 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 					<label>Experience</label>
 					<input type="text" name="experience" onChange={(evt) => handleChange(evt)} />
 					<label>Upload Photos</label>
-					<input type="file" name="file" onChange={(evt) => handleChange(evt)} />
+					<input type="url" name="photo" onChange={(evt) => handleChange(evt)} />
 					</form>
-					<button onClick={() => editPost(post._id)} id="edit" >Subit Changes</button>
+					<button onClick={() => editPost(post._id)} id="edit" >Submit Changes</button>
 				</div>
 			}
 		</div>
