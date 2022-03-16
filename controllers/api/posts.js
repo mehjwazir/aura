@@ -1,4 +1,5 @@
-const Post = require('../../models/post')
+const Post = require('../../models/post');
+const uploadFile = require('../../config/upload-file');
 
 
 module.exports = {
@@ -15,26 +16,25 @@ module.exports = {
 
 
 async function create(req, res) {
-	if (!req.body.photo) delete req.body.photo;
 	req.body.user = req.user._id;
+	if (req.file) {
+		req.body.photo = await uploadFile(req.file);
+	}
 	const post = await Post.create(req.body);
 	console.log(post);
-	// post.user = req.body.user;
-	// req.body.photo = await uploadFile(req.file);
-	// post.save();
 	res.json(post);
 }
 
 
 
 async function getAll(req, res) {
-	const posts = await Post.find({});
+	const posts = await Post.find({}).populate("user");
 	res.json(posts);
 }
 
 
 async function getAllUserPost(req, res) {
-	const posts = await Post.find({ user: req.user._id })
+	const posts = await Post.find({ user: req.user._id }).populate("user");
 	console.log('please work');
 	res.json(posts);
 }

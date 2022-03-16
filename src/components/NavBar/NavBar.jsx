@@ -9,13 +9,14 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav className='navbar'>
-      <Link to="/">Home</Link>
+      <Link to="/">AURA</Link>
+      <Link to="/aura/home">Home</Link>
       <Link to="/aura/about">About</Link>
-     <Link to="/experience">Experiences</Link>
-     <Link to="/discover">Discover</Link>
-     <span>Welcome, {user.name}</span>
-     <Link to="/aura/login">Login</Link>
-      <Link onClick={handleLogOut} to="">Log Out</Link>
+      <Link to="/experience">Experiences</Link>
+      <Link to="/discover">Discover</Link>
+      <span>Welcome, {user.name}</span>
+      {user ? <Link onClick={handleLogOut} to="">Log Out</Link>
+        : <Link to="/aura/login">Login</Link>}
     </nav>
   );
 }

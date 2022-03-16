@@ -49,13 +49,14 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 
 	useEffect(() => {
 		console.log('this is the post', post);
-		if (post.user === user._id)
+		console.log('this is the user', user);
+		if (post.user._id === user._id)
 			setShowDelete(true);
 
 	},[]);
 
 
-	
+	console.log(post);
 
 	return (
 		<div>
@@ -67,7 +68,7 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 				<h4>{post.location}</h4>
 				<h5>{post.website}</h5>
 				<h6>{post.experience}</h6>
-				<h2> Created By: {user.name}  </h2> 
+				<h2> Created By: {post.user.name}  </h2> 
 				{showDelete &&
 					<>
 					<button type="submit" onClick={() => handleDelete(post._id)} id="detailDelete"> Delete </button>

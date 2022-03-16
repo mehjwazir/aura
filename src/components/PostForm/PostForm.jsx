@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './PostForm.css';
 import { useNavigate } from 'react-router-dom';
 import * as postsAPI from '../../utilities/posts-api';
@@ -12,19 +12,25 @@ export default function PostForm({ setUserPosts, setPosts, userPosts, posts }) {
 		location: "",
 		website: "",
 		experience: "",
-		photo: ""
-
-	})
+	});
 	const navigate = useNavigate();
-	// const fileInputRef = useRef()
+	const fileInputRef = useRef();
 
 
 
 	async function handleSubmit(evt) {
 		evt.preventDefault();
-		const post = await postsAPI.create(formData);
+		const form = new FormData();
+		form.append('restaurant', formData.restaurant);
+		form.append('date', formData.date);
+		form.append('location', formData.location);
+		form.append('website', formData.website);
+		form.append('experience', formData.experience);
+		form.append('photo', fileInputRef.current.files[0]);
+		const post = await postsAPI.create(form);
 		setPosts([...posts, post]);
 		setUserPosts([...userPosts, post]);
+		fileInputRef.current.value = '';
 		navigate('/experience');
 	}
 
@@ -35,17 +41,11 @@ export default function PostForm({ setUserPosts, setPosts, userPosts, posts }) {
 	}
 
 
-	//Added this for image
-	// form.append('photo', fileInputRef.current.files[0]);
-
-
-
-	//Added fileinputref for image
 	return (
 		<div>
 			<div>
 				<h1>Create Experience</h1>
-				<form className='form-container' >
+				<form className='form-container' onSubmit={handleSubmit} >
 					<label>Restaurant</label>
 					<input type="text" name="restaurant" onChange={(evt) => handleChange(evt)} />
 					<label>Date</label>
@@ -57,17 +57,16 @@ export default function PostForm({ setUserPosts, setPosts, userPosts, posts }) {
 					<label>Experience</label>
 					<input type="text" name="experience" onChange={(evt) => handleChange(evt)} />
 					<label>Upload Photos</label>
-					<input type="url" name="photo" onChange={(evt) => handleChange(evt)} />
+					<input type="file" ref={fileInputRef} />
 
 				</form>
-				<button onClick={(evt) => handleSubmit(evt)} type="submit" className="button btn-sm">Create</button>
+				<button type="submit" className="button btn-sm">Create</button>
 			</div>
 
 		</div>
 	);
 }
-//to add in input for photos
-// ref = { fileInputRef }
+
 
 
 
