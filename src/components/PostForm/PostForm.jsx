@@ -58,9 +58,9 @@ export default function PostForm({ setUserPosts, setPosts, userPosts, posts }) {
 					<input type="text" name="experience" onChange={(evt) => handleChange(evt)} />
 					<label>Upload Photos</label>
 					<input type="file" ref={fileInputRef} />
-
+					<button type="submit" className="button btn-sm">Create</button>
 				</form>
-				<button type="submit" className="button btn-sm">Create</button>
+
 			</div>
 
 		</div>
