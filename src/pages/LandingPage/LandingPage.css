@@ -1,0 +1,28 @@
+.landing-page {
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-right: 12vh;
+}
+
+
+
+.welcome-image {
+	height: 622px;
+	width: 900px;
+	float: right;
+}
+
+.welcome-title {
+	color: gray;
+	margin-top: 10vmin;
+}
+
+.welcome-button {
+	background-color: gray;
+	text-decoration: underline;
+}
+
+.welcome-line {
+	color: slategray;
+	font-style: italic;
+}

@@ -1,6 +1,6 @@
 import "./PostDetailPage.css";
 import { useParams, useNavigate } from "react-router-dom";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import * as postsAPI from '../../utilities/posts-api';
 
 
@@ -14,6 +14,7 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 	const [showForm, setShowForm] = useState(false);
 	const [formData, setFormData] = useState(post);
 	const [showDelete, setShowDelete] = useState(false);
+	const fileInputRef = useRef();
 	const navigate = useNavigate();
 	
 
@@ -23,6 +24,7 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 		const updatedUserPosts = userPosts.map((post) => post._id === update._id ? update : post);
 		setPosts(updatedPosts);
 		setUserPosts(updatedUserPosts);
+		fileInputRef.current.value = '';
 	
 	}
 
@@ -35,7 +37,6 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 	async function deletePost(id) {
 		const deletePost = await postsAPI.deletePost(id);
 		const updatedPosts = posts.filter(post => post._id !== deletePost._id);
-		console.log('testing', updatedPosts)
 		setPosts(updatedPosts);	
 	}  
 
@@ -48,15 +49,12 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 
 
 	useEffect(() => {
-		console.log('this is the post', post);
-		console.log('this is the user', user);
 		if (post.user._id === user._id)
 			setShowDelete(true);
 
 	},[]);
 
 
-	console.log(post);
 
 	return (
 		<div>
@@ -94,9 +92,10 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 					<label>Experience</label>
 					<input type="text" name="experience" onChange={(evt) => handleChange(evt)} />
 					<label>Upload Photos</label>
-					<input type="url" name="photo" onChange={(evt) => handleChange(evt)} />
+						<input type="file" ref={fileInputRef} name="photo"  onChange={(evt) => handleChange(evt)} /> 
+						<button onClick={() => editPost(post._id)} id="edit" >Submit Changes</button>
 					</form>
-					<button onClick={() => editPost(post._id)} id="edit" >Submit Changes</button>
+					
 				</div>
 			}
 		</div>

@@ -7,14 +7,18 @@ export default function PostCard({ post }) {
 		<>
 
 			<Link to={`/${post._id}`} >
-				<div className='postcard'>
-					<div className='card-body'>
-						<img src={post.photo} alt="img" />
-						<h2 className='card-title'>{post.restaurant}</h2>
-						<p className="card-description">{post.experience}</p>
+				<ul>
+					<li className='card-container'>
+						<div className='card-container--content'>
+					<div className='card_body'>
+						<img src={post.photo} alt="img" className="card-image"  />
+						<h2 className="card-header--title">{post.restaurant}</h2>
+								<span className="card-date">{post.date}</span>
 					</div>
-					<button type="submit" className="button btn-sm">details</button>
-				</div>
+							<button type="submit" className="card-button">details</button>
+						</div>
+					</li>
+				</ul>
 			</Link>
 		</>
 	);

@@ -1,0 +1,39 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    gap: 1em;
+    font-size: 20px;
+}
+
+
+
+.nav-links {
+   color: Black;
+    width: 30vh;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    color: green;
+}
+
+
+/* nav.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1.2em 2.8em;
+} */
+
+a {
+  text-decoration: none;
+  color: rgb(100, 97, 97);
+}

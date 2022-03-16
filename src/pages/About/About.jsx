@@ -9,7 +9,7 @@ export default function About() {
 				width={300}/>
 			
 			<h3 className='h3aura'>REST <span className='aura'>AURA</span> NT</h3>
-			<p className="Text"> is a personal experience website that allows you to save your adventures in one place.</p>
+			<p className="Text"> Is a personal experience website that allows you to save your adventures in one place.</p>
 
 			<img src="https://i.imgur.com/mUCpU2K.jpg" alt="img" className='gray-img'
 				width={300} />

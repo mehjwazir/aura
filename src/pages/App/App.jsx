@@ -48,11 +48,10 @@ export default function App() {
       <NavBar user={user} setUser={setUser} />
           <Routes className="NavBar">
             {/* Route components in here */}
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/aura/home" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/aura/about" element={<About />} />
             <Route path="/experience" element={<PostsPage userPosts={userPosts} setUserPosts={setUserPosts} />} />
-            <Route path="/:id" element={<PostDetailPage posts={posts} setPosts={setPosts} user={user} setUserPosts={setUserPosts} userPosts = {userPosts} />} />
+            <Route path="/:id" element={<PostDetailPage posts={posts} setPosts={setPosts} user={user} setUserPosts={setUserPosts} userPosts={userPosts} />} />
             <Route path="/create" element={<PostForm userPosts={userPosts} setUserPosts={setUserPosts} posts={posts} setPosts={setPosts} />} />
             <Route path="/discover" element={<DiscoverPage posts={posts} />} />
             <Route path="/aura/login" element={<AuthPage />} />
