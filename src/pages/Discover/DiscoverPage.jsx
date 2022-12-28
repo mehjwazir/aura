@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import PostCard from '../../components/PostCard/PostCard';
 import * as postsAPI from '../../utilities/posts-api';
 import { useEffect } from 'react';
 
 
-export default function DiscoverPage({posts, setPosts}) {
+export default function DiscoverPage({ posts, setPosts }) {
 
 	useEffect(function () {
 		async function getAllPosts() {
@@ -12,14 +12,14 @@ export default function DiscoverPage({posts, setPosts}) {
 			setPosts(allPosts);
 		}
 		getAllPosts();
-		
+
 	}, []);
 
 
 	return (
 		<main>
 			<h1>Discover Page</h1>
-			
+
 
 			<div className="container">
 				{posts && posts.map((post, idx) => {
