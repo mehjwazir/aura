@@ -1,33 +1,39 @@
-/* .HomePage {
-	background-image: url(https://i.imgur.com/bzVHm3y.gif);
-	background-repeat: no-repeat;
-	height: 300vmin;
-	width: 215vmin;
-	margin-top: 10vmin;
-} */
 
-
-.home-image {
- height: 600px;
- width: 400px;
- float:right;
- margin-right: 27vmin;
+.HomePage {
+	margin: 0;
+	padding: 0;
 }
 
-.title {
-  letter-spacing: 14.5px;
-  line-height: 80px;
-  width: 907px;
-  opacity: 80%;
-} 
+.img-div {
+	position: relative;
+	color: white;
+	justify-content: center;
+	margin-top: 1.5rem;
+}
+/* .home-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+} */
 
- .place {
-font-size: 40px;
+.home-text {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 
-} 
+.home-h2 {
+	font-size: 3rem;
+	color: white;
 
-/* .createbtn {
-	margin-top: 35px !important; 
-	margin-right: 75vmin !important; 
-	
-}  */
+}
+
+.create-link {
+	text-decoration: underline;
+}
+
+
+
+
+

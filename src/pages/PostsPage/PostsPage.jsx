@@ -19,14 +19,9 @@ export default function PostsPage({ setUserPosts, userPosts }) {
 
   }, []);
 
-
-
-
-
-
   return (
     <main>
-      <h1>Experience</h1>
+      <h1 className='posts-h1'>Experience</h1>
       <Link to="/create" className="button btn-sm">Create Experience</Link>
     
     <div className="container">

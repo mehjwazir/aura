@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
 import AuthPage from '../AuthPage/AuthPage';
-// import LandingPage from '../LandingPage/LandingPage'
 import HomePage from '../Home/HomePage'
 import About from '../About/About';
 import PostForm from '../../components/PostForm/PostForm';
@@ -48,13 +47,12 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes className="NavBar">
             {/* Route components in here */}
-            <Route path="/" element={<HomePage />} />
-            <Route path="/aura/about" element={<About />} />
-            <Route path="/experience" element={<PostsPage userPosts={userPosts} setUserPosts={setUserPosts} />} />
-            <Route path="/:id" element={<PostDetailPage posts={posts} setPosts={setPosts} user={user} setUserPosts={setUserPosts} userPosts={userPosts} />} />
-            <Route path="/create" element={<PostForm userPosts={userPosts} setUserPosts={setUserPosts} posts={posts} setPosts={setPosts} />} />
-            <Route path="/discover" element={<DiscoverPage posts={posts} />} />
-            <Route path="/aura/login" element={<AuthPage />} />
+            <Route path="/" element={<HomePage user={user} />} />
+            <Route path="/aura/about" element={<About user={user} />} />
+            <Route path="/experience" element={<PostsPage user={user} userPosts={userPosts} setUserPosts={setUserPosts} />} />
+            <Route path="/:id" element={<PostDetailPage user={user} posts={posts} setPosts={setPosts}  setUserPosts={setUserPosts} userPosts={userPosts} />} />
+            <Route path="/create" element={<PostForm user={user} userPosts={userPosts} setUserPosts={setUserPosts} posts={posts} setPosts={setPosts} />} />
+            <Route path="/discover" user={user} element={<DiscoverPage posts={posts} />} />
           </Routes>
         </>
         :

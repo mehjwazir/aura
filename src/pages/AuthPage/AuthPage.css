@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital@1&display=swap');
+
+
+.authPage {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	background-image: url(https://i.imgur.com/IiRn6BH.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.auth-h1 {
+	color: aliceblue;
+	margin-top: 4rem;
+	font-size: 3rem;
+}
+
+.auth-h2 {
+	color: beige;
+	font-family: 'Cantarell', sans-serif;
+}

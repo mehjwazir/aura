@@ -1,10 +1,12 @@
-@mixin flex {
+/* @mixin flex {
 	display: flex; 
 	flex-direction: column; 
-}
+} */
 
 * {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
 }
 
 
@@ -20,7 +22,6 @@ p {
 }
 
 .card-container {
-  @include flex;
   width: 320px;
   margin: 5%;
   list-style-type: none;
@@ -31,9 +32,12 @@ p {
   
 } 
 
-img {
+.card-img {
   border-radius: 4px 4px 0 0;
-  max-width: 105%;
+  width: 320px;
+  height: 300px;
+
+  /* max-width: 105%; */
   order: 1;
   
 

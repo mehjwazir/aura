@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as usersService from '../../utilities/users-service';
 import './LoginForm.css';
 
@@ -8,6 +9,7 @@ export default function LoginForm({ setUser }) {
     password: ''
   });
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   function handleChange(evt) {
     setCredentials({ ...credentials, [evt.target.name]: evt.target.value });
@@ -25,22 +27,22 @@ export default function LoginForm({ setUser }) {
       setUser(user);
     } catch {
       setError('Log In Failed - Try Again');
+      navigate('/');
     }
   }
 
   return (
-    <main className='login-container'>
+    <main>
     <div> 
         <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Email</label>
           <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
           <label>Password</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
+            <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
+            <br />
           <button type="submit">LOG IN</button>
           </form>
-          <h1>Welcome to AURA!</h1>
-          <h2 className='welcome-line'>Turn moments into memories you can experience. </h2>
       </div>
       <p className="error-message">&nbsp;{error}</p>
       </div>

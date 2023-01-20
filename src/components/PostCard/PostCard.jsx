@@ -11,7 +11,7 @@ export default function PostCard({ post }) {
 					<li className='card-container'>
 						<div className='card-container--content'>
 					<div className='card_body'>
-						<img src={post.photo} alt="img" className="card-image"  />
+						<img src={post.photo} alt="img" className="card-img"  />
 						<h2 className="card-header--title">{post.restaurant}</h2>
 								<span className="card-date">{post.date}</span>
 					</div>
