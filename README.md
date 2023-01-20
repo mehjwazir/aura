@@ -39,7 +39,7 @@ a full-CRUD web app to allow users to save their personal experiences at restaur
 
 # Getting Started #
 
-[Click Here](https://auraexperience.herokuapp.com/)
+[Click Here](aura.up.railway.app)
 
 
 # Next Steps #
