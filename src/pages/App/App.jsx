@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../Home/HomePage'
 import About from '../About/About';
@@ -54,6 +55,7 @@ export default function App() {
             <Route path="/create" element={<PostForm user={user} userPosts={userPosts} setUserPosts={setUserPosts} posts={posts} setPosts={setPosts} />} />
             <Route path="/discover" user={user} element={<DiscoverPage posts={posts} />} />
           </Routes>
+          <Footer />
         </>
         :
         <AuthPage setUser={setUser} />

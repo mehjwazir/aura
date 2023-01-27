@@ -1,39 +1,108 @@
 
-.HomePage {
-	margin: 0;
-	padding: 0;
-}
-
-.img-div {
-	position: relative;
-	color: white;
-	justify-content: center;
-	margin-top: 1.5rem;
-}
-/* .home-img {
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 100vh;
-} */
 
 .home-text {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+color: white;
+margin-top: 3rem;
+margin-bottom: 3rem;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
 
-.home-h2 {
+
+
+
+.home-text h1 {
 	font-size: 3rem;
 	color: white;
-
 }
+
+
+
+.home-img {
+	height: 100%;
+	width: 100%;
+	background: cover;
+}
+
 
 .create-link {
-	text-decoration: underline;
+	position: relative;
+	
+}
+.create-link  a {
+text-decoration: none;
+	color: beige;
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	padding: 10px 20px;
+	
 }
 
 
+.create-link a::after {
+	position: absolute;
+	content: '';
+	bottom: 5px;
+	left: 0;
+	right:0;
+	width: 100%;
+	height: 2px;
+	background-color: green;
+	transition: all .8s ease;
 
+}
+
+.create-link a:hover {
+	color: white;
+	z-index: 1;
+	transition: all .8s ease;
+
+	
+}
+
+.create-link a:hover::after {
+	height: 80%;
+	z-index: -1;
+}
+
+.featured-div {
+	margin-top: 4rem;
+}
+
+.test-img {
+	height: 50%;
+	width: 40%;
+}
+
+.txt-p {
+	  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 35rem));
+justify-content: center;
+text-align: left;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 0;
+}
+
+.mb8 {
+	margin-bottom: 8px;
+
+}
+
+.alt-font {
+	display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(22rem, 20rem));
+		justify-content: center;
+	text-transform: uppercase;
+	font-family: 'Teko', 'Georgia', 'Helvetica', sans-serif;
+	font-size: 15px;
+	line-height: 35px;
+	color: #222;
+	margin-top: 3rem;
+}
 
 

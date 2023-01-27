@@ -1,60 +1,132 @@
-nav {
+.navbar {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content:flex-start;
-  padding: 1rem;
+  padding: 30px 7%;
   background-color: white;
-  color: black;
-  gap: 1em;
-  font-size: 10px;
-  top: 0;
-  /* margin-bottom: 1rem; */
+ 
 }
 
+.bars-button {
+  display: none;
+}
 
+.nav-logo {
+  color: gray;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 30px;
+  padding-right: 30px;
+}
 
 .nav-links {
-  color: Black;
-  /* width: 20vh; */
-  width: 4vw;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.nav-links:hover {
-  color: green;
-}
-
-
-a {
-  text-decoration: none;
-  color: rgb(100, 97, 97);
-}
-
-.aura-h1 {
-  font-size: 2rem;
-  /* text-align: center; */
-  margin-left: 16rem;
- 
-
-}
-
-/* nav {
   display: flex;
-  justify-content: space-around;
-  background-color: white;
   align-items: center;
-  font-size: 1rem;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 1px;
   font-weight: 400;
-  padding: 1.2em 2.8em;
-} */
+  padding: 10px 20px;
+  position: relative;
+}
+
+.nav-links a::after {
+  position: absolute;
+  content: '';
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: green;
+  transition: all .8s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+  z-index: 1;
+  transition: all .8s ease;
+}
+
+.nav-links a:hover::after {
+  height: 80%;
+  z-index: -1;
+}
+
+@media only screen and (max-width:981px) {
+  .navbar {
+    padding: 25px 3%;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}
 
 
 
-/* 
-.nav-img {
+@media only screen and (max-width:768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    align-items: center;
     justify-content: center;
-    height: 4vmin;
-     
-} */
+    z-index: 1001;
+
+  }
+
+  .bars-button {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50px;
+    height: 40px;
+    z-index: 1002;
+    position: relative;
+  }
+
+  .bars-button span {
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    transition: all .3s ease;
+  }
+
+  .bars-button.active span:nth-child(1) {
+   transform: rotate(45deg) translate(0.75em, 1.25em);
+   transition: ease-out 0.2s;
+  }
+
+  .bars-button.active span:nth-child(2) {
+   transform: scale(0.1);
+   transition: ease-out 0.1s;
+  }
+
+  .bars-button.active span:nth-child(3) {
+    transform: rotate(135deg) translate(-0.5em, 1em);
+    transition: ease-out 0.2s;
+  }
+}
+
+
+
+
+
+
+
+
