@@ -1,12 +1,12 @@
 .footer {
-	margin-top: 30rem;
+	/* margin-top: 30rem; */
 	background-color: #F1F0ED;
 	color: gray;
 	padding: 20px;
 	text-align: center;
-	border-radius: 12px;
-	margin-right: 10px;
-	margin-left: 10px;
+	border-radius: 0 0 30px 30px;
+	margin-right: 1rem;
+	margin-left: 1rem;
 	
 }
 
@@ -47,4 +47,8 @@
 	
 list-style-type: none;
 	
+}
+
+.copyright {
+	margin-top: 1rem;
 }

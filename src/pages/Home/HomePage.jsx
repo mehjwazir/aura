@@ -7,16 +7,84 @@ export default function HomePage({ user, }) {
 	return (
 		<main className="HomePage">
 			<div className='img-div'>
-				<img className="home-img" src="https://i.imgur.com/v9S4EnC.gif" alt="" />
+				<img className="home-img" src="Aura2.png" alt="" />
+				<div className='create-link link-container'>
+					<Link className="create-link1" to="/create">
+						Create Experience</Link></div>
 			</div>
-			<div className='home-text'>
-				<h1>AURA</h1>
-				<h3>Your next adventure awaits..</h3>
-				<p>Turn moments into memories </p>		
+
+			{/* <div className='home-text'>	
 				<div className='create-link'>
 					<Link className="create-link" to="/create">Create Experience</Link>
 				</div>
+			</div> */}
+
+
+			{/* <div className='featured-div'>
+				<h3>This weeks featured cafes and restaurants</h3>
+				<ul>
+					<li>Maru Coffee</li>
+					<li>Great White</li>
+					<li>Destroyer</li>
+					<li>Tea At Shiloh</li>
+					<li>Laurel Hardware</li>
+				</ul>
+			</div> */}
+
+
+			<div className="scrolling-wrapper">
+				<div className="card133">
+					<div>
+						<a href="https://www.marucoffee.com/" rel="noreferrer" target="_blank"><img className="card-image" src="https://i.imgur.com/HmtGZxF.png" alt="maru coffee" /></a>
+					</div>
+				</div>
+				<div className="card133">
+					<div>
+						<a href="https://www.greatwhite.cafe/" rel="noreferrer" target="_blank">
+							<img className="card-image" src="https://i.imgur.com/SL6xnZw.png" alt="great white cafe" /></a>
+					</div>
+				</div>
+				<div className="card133">
+					<div>
+						<a href="http://destroyer.la/" rel="noreferrer" target="_blank">
+							<img className="card-image" src="https://i.imgur.com/ofYFN9L.png" alt="destroyer cafe" /></a>
+					</div>
+				</div>
+				<div className="card133">
+					<div>
+						<a href="https://teaatshiloh.com/" rel="noreferrer" target="_blank">
+							<img className="card-image" src="https://i.imgur.com/j3rUpNk.png" alt="tea at shiiloh" /></a>
+					</div>
+				</div>
+				<div className="card133">
+					<div>
+						<a href="https://www.laurelhardware.com/" rel="noreferrer" target="_blank">
+							<img className="card-image" src="https://i.imgur.com/Oic5PMO.png" alt="Laurel Hardware" /></a>
+					</div>
+				</div>
+				<div className="card133">
+					<div>
+						<a href="https://canyoncoffee.co/" rel="noreferrer" target="_blank">
+							<img className="card-image" src="https://i.imgur.com/zIxMGND.png" alt="canyon coffee" /></a>
+					</div>
+				</div>
 			</div>
+
+			<div>
+				<img src="cm.webp" alt="" className='fruit-pic' />
+			</div>
+			<div>
+				<img src="Aura.jpg" alt="" className='aura-orchid' />
+			</div>
+			<div>
+				<img src="aura-food.jpg" alt="" className='aura-food'/>
+			</div>
+
+			<div>
+				<img src="aura-footer.jpg" alt="aura-footer" className='aura-footer' />
+			</div>
+			
+{/* 
 			<div>
 				<h2>Introducing: Aura</h2>
 			</div>
@@ -43,24 +111,7 @@ export default function HomePage({ user, }) {
 					"LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT. ENIM CUPIDITATE DIGNISSIMOS ITAQUE."
 				</p>
 				<span className='sub'>- Alek Chattman</span>
-			</div>
-
-
-
-
-			<div className='featured-div'>
-				<h3>This weeks featured new restaurants and cafes</h3>
-				<ul>
-					<li>Lavo</li>
-					<li>Mother tongue</li>
-					<li>Maru coffe</li>
-					<li>Bravo Toast</li>
-				</ul>
-				<div>
-					
-				</div>
-			</div>
-
+			</div> */}
 		</main>
 	);
 }

@@ -1,5 +1,26 @@
 .detail-img {
-	width: 650px;
-	height: 600px;
-	margin-top: 4rem;
+	width: 550px;
+	height: 500px;
+	margin-top: 1rem;
+	border: solid #67645e;
+	border-radius: 30px;
 }
+
+.detail-title {
+	margin-top: 2rem;
+	color: #67645e;
+}
+
+.post-details {
+	color: #67645e;
+	margin-top: 3rem;
+}
+
+ @media only screen and (max-width: 530px) {
+	.detail-img {
+		height: 100%;
+		width: 100%;
+		border-radius: 30px;
+
+	}
+ }

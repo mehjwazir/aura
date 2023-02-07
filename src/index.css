@@ -1,5 +1,5 @@
 /* CSS Custom Properties */
-/* :root {
+ /* :root {
   --white: #FFFFFF;
   --tan-1: #FBF9F6;
   --tan-2: #E7E2DD;
@@ -8,7 +8,10 @@
   --orange: #F67F00;
   --text-light: #968c84;
   --text-dark: #615954;
-} */
+  --background-footer: #f1f0ed;
+  --background-light: #E5E5E5;
+  --dark-brown: #67645e;
+}  */
 
 /* *, *:before, *:after {
   box-sizing: border-box;

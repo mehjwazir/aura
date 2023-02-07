@@ -18,7 +18,7 @@ export default function DiscoverPage({ posts, setPosts }) {
 
 	return (
 		<main>
-			<h1>Discover</h1>
+			<h1 className='posts-h1'>Discover</h1>
 			<div className="container">
 				{posts && posts.map((post, idx) => {
 					return <PostCard post={post} key={idx} />;

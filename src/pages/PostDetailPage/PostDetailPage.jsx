@@ -52,20 +52,20 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 		if (post.user._id === user._id)
 			setShowDelete(true);
 
-	},[]);
+	},[post]);
 
 
 
 	return (
 		<div>
 		
-			 <div>
+			<div className="post-details">
+				<h1 className="detail-title">{post.restaurant}</h1>
 				<img className="detail-img" src={post.photo} alt="img" />
-				<h1>{post.restaurant}</h1>
-				<h6>{post.date}</h6>
+				<h5>{post.date}</h5>
 				<h4>{post.location}</h4>
-				<h5>{post.website}</h5>
-				<h6>{post.experience}</h6>
+				<h4>{post.website}</h4>
+				<h4>{post.experience}</h4>
 				<h2> Created By: {post.user.name}  </h2> 
 				{showDelete &&
 					<>

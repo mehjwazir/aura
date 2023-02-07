@@ -22,7 +22,7 @@ export default function PostsPage({ setUserPosts, userPosts }) {
   return (
     <main>
       <h1 className='posts-h1'>Experience</h1>
-      <Link to="/create" className="button btn-sm">Create Experience</Link>
+      <Link to="/create" className="button btn-sm posts-btn">Create Experience</Link>
     
     <div className="container">
       {userPosts && userPosts.map((post, idx) => {
