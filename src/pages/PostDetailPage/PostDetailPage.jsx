@@ -62,10 +62,10 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 			<div className="post-details">
 				<h1 className="detail-title">{post.restaurant}</h1>
 				<img className="detail-img" src={post.photo} alt="img" />
-				<h5>{post.date}</h5>
-				<h4>{post.location}</h4>
-				<h4>{post.website}</h4>
-				<h4>{post.experience}</h4>
+				<h5>Date: {post.date}</h5>
+				<h4>Location: {post.location}</h4>
+				<h4>Website: {post.website}</h4>
+				<h4>Experience: {post.experience}</h4>
 				<h2> Created By: {post.user.name}  </h2> 
 				{showDelete &&
 					<>

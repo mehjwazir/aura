@@ -4,6 +4,7 @@
 	margin-top: 1rem;
 	border: solid #67645e;
 	border-radius: 30px;
+	margin-bottom: 1rem;
 }
 
 .detail-title {
@@ -14,6 +15,7 @@
 .post-details {
 	color: #67645e;
 	margin-top: 3rem;
+	margin-bottom: 20rem;
 }
 
  @media only screen and (max-width: 530px) {

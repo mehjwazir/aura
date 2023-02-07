@@ -44,7 +44,7 @@ export default function PostForm({ setUserPosts, setPosts, userPosts, posts }) {
 	return (
 		<div>
 			<div>
-				<h1>Create Experience</h1>
+				<h1 className='form-title'>Create Experience</h1>
 				<form className='form-container' onSubmit={handleSubmit} >
 					<label>Restaurant</label>
 					<input type="text" name="restaurant" onChange={(evt) => handleChange(evt)} />
