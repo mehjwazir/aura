@@ -8,6 +8,7 @@ const Footer = () => {
 		<footer className="footer">
 			<div className="social-icons">
 				<p>SOCIAL</p>
+			
 				<ul className='ul-social'>
 					<li><a href='https://aura.up.railway.app/'><FaInstagram className="icon" /></a>Instagram</li>
 					<li><a href='https://aura.up.railway.app/'><FaYoutube className="icon" /></a>Youtube</li>
