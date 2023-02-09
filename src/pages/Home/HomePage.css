@@ -1,4 +1,4 @@
-
+/* 
 
 .home-text {
 color: white;
@@ -16,39 +16,54 @@ transform: translate(-50%, -50%);
 .home-text h1 {
 	font-size: 3rem;
 	color: white;
+} */
+
+.img-div {
+	position: relative;
 }
 
-
+ .link-container {
+ 	position: absolute;
+ 	top: 45%;
+ 	right: 67%;
+ 	z-index: 1;
+ }
 
 .home-img {
 	height: 100%;
 	width: 100%;
-	background: cover;
-}
-
-
-.create-link {
-	position: relative;
 	
 }
-.create-link  a {
+
+.create-link1 {
+font-size: 15px;
 text-decoration: none;
-	color: beige;
-	font-size: 20px;
+	color: gray;
+
+	letter-spacing: 1px;
+
+	padding: 10px 10px;
+}
+
+/* .create-link  a {
+text-decoration: none;
+	color: gray;
+
 	letter-spacing: 1px;
 	font-weight: 400;
 	padding: 10px 20px;
 	
-}
+}  */
+
 
 
 .create-link a::after {
 	position: absolute;
 	content: '';
-	bottom: 5px;
-	left: 0;
-	right:0;
-	width: 100%;
+	bottom: -1px;
+	left: 7px;
+	right: 7px;
+	
 	height: 2px;
 	background-color: green;
 	transition: all .8s ease;
@@ -59,12 +74,11 @@ text-decoration: none;
 	color: white;
 	z-index: 1;
 	transition: all .8s ease;
-
 	
 }
 
 .create-link a:hover::after {
-	height: 80%;
+	height: 110%;
 	z-index: -1;
 }
 
@@ -106,3 +120,98 @@ text-align: left;
 }
 
 
+ @media only screen and (max-width: 530px) {
+	.create-link1 {
+		font-size: 10px;	
+	}
+
+		 .link-container {
+		 	position: absolute;
+		 	top: 45%;
+		 	right: 60%;
+		 	z-index: 1;
+		 }
+} 
+
+.scrolling-wrapper {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+
+	
+}
+
+.card133 {
+	display: inline-block;
+}
+.scrolling-wrapper-flexbox {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+
+	
+}
+
+.card133 {
+	width: 390px;
+	height: 450px;
+	background: gray;
+	margin: 2rem;
+	/* padding: 1.75rem; */
+	border-radius: 25px;
+}
+
+.scrolling-wrapper,
+.scrolling-wrapper-flexbox {
+	
+	-webkit-overflow-scrolling: touch;
+
+
+}
+
+				::-webkit-scrollbar {
+					display: none;
+				} 
+
+
+.card-image {
+	width: 390px;
+	height: 490px;
+	border-radius: 10px;
+}
+
+.fruit-pic {
+	height: 100%;
+	width: 100%;
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 30px;
+}
+
+.aura-orchid {
+	height: 100%;
+	width: 100%;
+	padding: 1rem;
+	border-radius: 30px;
+
+}
+
+.aura-food {
+	height: 30rem;
+	width: 100%;
+	padding: 1rem;
+	border-radius: 30px;
+	
+}
+
+
+.aura-footer {
+	height: 100%;
+	width: 100%;
+	border-radius: 30px 30px 0 0;
+	padding: 1rem 1rem 0 1rem;
+}
+
+.marquee {
+	background-color: #F1F0ED;
+}

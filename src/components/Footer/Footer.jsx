@@ -6,7 +6,6 @@ const Footer = () => {
 	return (
 	
 		<footer className="footer">
-			
 			<div className="social-icons">
 				<p>SOCIAL</p>
 				<ul className='ul-social'>

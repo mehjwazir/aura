@@ -4,6 +4,7 @@
   align-items: center;
   padding: 30px 7%;
   background-color: white;
+  margin-bottom: 0;
  
 }
 
@@ -98,6 +99,7 @@
     height: 40px;
     z-index: 1002;
     position: relative;
+
   }
 
   .bars-button span {
