@@ -85,9 +85,9 @@ export default function HomePage({ user, }) {
 				<img src="aura-footer.jpg" alt="aura-footer" className='aura-footer' />
 			
 			</div>
-			<div>
+			{/* <div>
 				<marquee className="marquee" behavior="scroll" direction="left">Your scrolling text goes here</marquee>
-			</div>
+			</div> */}
 			
 {/* 
 			<div>
