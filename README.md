@@ -51,7 +51,7 @@ Turn moments into memories
 
 # Getting Started #
 
-[Click Here](aura.up.railway.app)
+[Click Here](https://aura.up.railway.app/)
 
 
 # Next Steps #
