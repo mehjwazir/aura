@@ -18,13 +18,13 @@ Turn moments into memories
 
 ![](https://i.imgur.com/hVgFyJz.png)
 ![](https://i.imgur.com/HehlIGk.png)
-![](https://i.imgur.com/HJWKQC0.png)
-![](https://i.imgur.com/ImIlBCd.png)
+![](https://i.imgur.com/0zWaKRw.png)
+![](https://i.imgur.com/HG8fPux.png)
 
 
 # ***About Page***
 
-![](https://i.imgur.com/kBJP9eN.mp4)
+![](https://i.imgur.com/wsXVfUU.gifv)
 
 
 # ***Experience Page***
