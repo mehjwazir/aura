@@ -1,59 +1,27 @@
-/* 
-
-.home-text {
-color: white;
-margin-top: 3rem;
-margin-bottom: 3rem;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-
-
-
-
-.home-text h1 {
-	font-size: 3rem;
-	color: white;
-} */
-
 .img-div {
 	position: relative;
 }
 
- .link-container {
- 	position: absolute;
- 	top: 45%;
- 	right: 67%;
- 	z-index: 1;
- }
+.link-container {
+	position: absolute;
+	top: 45%;
+	right: 67%;
+	z-index: 1;
+}
 
 .home-img {
 	height: 100%;
 	width: 100%;
-	
+
 }
 
 .create-link1 {
-font-size: 15px;
-text-decoration: none;
+	font-size: 15px;
+	text-decoration: none;
 	color: gray;
-
 	letter-spacing: 1px;
-
 	padding: 10px 10px;
 }
-
-/* .create-link  a {
-text-decoration: none;
-	color: gray;
-
-	letter-spacing: 1px;
-	font-weight: 400;
-	padding: 10px 20px;
-	
-}  */
 
 
 
@@ -63,7 +31,6 @@ text-decoration: none;
 	bottom: -1px;
 	left: 7px;
 	right: 7px;
-	
 	height: 2px;
 	background-color: green;
 	transition: all .8s ease;
@@ -74,7 +41,7 @@ text-decoration: none;
 	color: white;
 	z-index: 1;
 	transition: all .8s ease;
-	
+
 }
 
 .create-link a:hover::after {
@@ -92,25 +59,21 @@ text-decoration: none;
 }
 
 .txt-p {
-	  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 35rem));
-justify-content: center;
-text-align: left;
-  margin-top: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(22rem, 35rem));
+	justify-content: center;
+	text-align: left;
+	margin-top: 2rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	padding: 0;
 }
 
-.mb8 {
-	margin-bottom: 8px;
-
-}
 
 .alt-font {
 	display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(22rem, 20rem));
-		justify-content: center;
+	grid-template-columns: repeat(auto-fit, minmax(22rem, 20rem));
+	justify-content: center;
 	text-transform: uppercase;
 	font-family: 'Teko', 'Georgia', 'Helvetica', sans-serif;
 	font-size: 15px;
@@ -120,36 +83,42 @@ text-align: left;
 }
 
 
- @media only screen and (max-width: 530px) {
+@media only screen and (max-width: 530px) {
 	.create-link1 {
-		font-size: 10px;	
+		font-size: 10px;
 	}
 
-		 .link-container {
-		 	position: absolute;
-		 	top: 45%;
-		 	right: 60%;
-		 	z-index: 1;
-		 }
-} 
+	.link-container {
+		position: absolute;
+		top: 45%;
+		right: 60%;
+		z-index: 1;
+	}
+
+	.scrolling-wrapper {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		white-space: nowrap;
+
+	}
+
+}
 
 .scrolling-wrapper {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	white-space: nowrap;
 
-	
+
 }
 
-.card133 {
-	display: inline-block;
-}
+
 .scrolling-wrapper-flexbox {
 	display: flex;
 	flex-wrap: nowrap;
 	overflow-x: auto;
 
-	
+
 }
 
 .card133 {
@@ -157,21 +126,20 @@ text-align: left;
 	height: 450px;
 	background: gray;
 	margin: 2rem;
-	/* padding: 1.75rem; */
+	display: inline-block;
 	border-radius: 25px;
 }
 
 .scrolling-wrapper,
 .scrolling-wrapper-flexbox {
-	
+
 	-webkit-overflow-scrolling: touch;
-
-
 }
 
-				::-webkit-scrollbar {
-					display: none;
-				} 
+
+::-webkit-scrollbar {
+	display: none;
+}
 
 
 .card-image {
@@ -180,7 +148,7 @@ text-align: left;
 	border-radius: 10px;
 }
 
-.fruit-pic {
+.restaurant-pic {
 	height: 100%;
 	width: 100%;
 	margin-top: 1rem;
@@ -196,22 +164,17 @@ text-align: left;
 
 }
 
-.aura-food {
-	height: 30rem;
+.aura-slogan {
+	height: 100%;
 	width: 100%;
 	padding: 1rem;
 	border-radius: 30px;
-	
-}
 
+}
 
 .aura-footer {
 	height: 100%;
 	width: 100%;
 	border-radius: 30px 30px 0 0;
 	padding: 1rem 1rem 0 1rem;
-}
-
-.marquee {
-	background-color: #F1F0ED;
 }
