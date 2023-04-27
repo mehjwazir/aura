@@ -5,24 +5,22 @@ import { useEffect } from 'react';
 
 
 export default function DiscoverPage({ posts, setPosts }) {
-
 	useEffect(function () {
 		async function getAllPosts() {
-			const allPosts = await postsAPI.getAll()
+			const allPosts = await postsAPI.getAll();
 			setPosts(allPosts);
 		}
 		getAllPosts();
-
-	}, []);
-
+	}, [setPosts]);
 
 	return (
 		<main>
-			<h1 className='posts-h1'>Discover</h1>
+			<h1 className="posts-h1">Discover</h1>
 			<div className="container">
-				{posts && posts.map((post, idx) => {
-					return <PostCard post={post} key={idx} />;
-				})}
+				{posts &&
+					posts.map((post, idx) => {
+						return <PostCard post={post} key={idx} />;
+					})}
 			</div>
 		</main>
 	);

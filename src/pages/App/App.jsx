@@ -53,7 +53,8 @@ export default function App() {
             <Route path="/experience" element={<PostsPage user={user} userPosts={userPosts} setUserPosts={setUserPosts} />} />
             <Route path="/:id" element={<PostDetailPage user={user} posts={posts} setPosts={setPosts}  setUserPosts={setUserPosts} userPosts={userPosts} />} />
             <Route path="/create" element={<PostForm user={user} userPosts={userPosts} setUserPosts={setUserPosts} posts={posts} setPosts={setPosts} />} />
-            <Route path="/discover" user={user} element={<DiscoverPage posts={posts} />} />
+            <Route path="/discover" user={user} element={<DiscoverPage posts={posts} setPosts={setPosts} />} />
+
           </Routes>
           <Footer />
         </>
