@@ -32,6 +32,7 @@ export default function LoginForm({ setUser }) {
   }
 
   return (
+    <>
     <main>
     <div> 
         <div className="form-container">
@@ -46,6 +47,7 @@ export default function LoginForm({ setUser }) {
       </div>
       <p className="error-message">&nbsp;{error}</p>
       </div>
-    </main>
+      </main>
+    </>
   );
 }

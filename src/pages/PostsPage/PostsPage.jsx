@@ -17,9 +17,10 @@ export default function PostsPage({ setUserPosts, userPosts }) {
     }
     getAllUsersPosts();
 
-  }, []);
+  }, [setUserPosts]);
 
   return (
+    <>
     <main>
       <h1 className='posts-h1'>Experience</h1>
       <Link to="/create" className="button btn-sm posts-btn">Create Experience</Link>
@@ -30,6 +31,7 @@ export default function PostsPage({ setUserPosts, userPosts }) {
           return <PostCard post={post} key={idx} />;
       })}
       </div>
-    </main>
+      </main>
+    </>
   );
 }

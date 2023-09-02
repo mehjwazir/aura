@@ -42,6 +42,7 @@ export default function App() {
 
 
   return (
+    <>
     <main className="App">
       {user ?
         <>
@@ -61,7 +62,8 @@ export default function App() {
         :
         <AuthPage setUser={setUser} />
       }
-    </main>
+      </main>
+    </>
   );
 }
 

@@ -52,11 +52,12 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 		if (post.user._id === user._id)
 			setShowDelete(true);
 
-	},[post]);
+	},[post,user._id]);
 
 
 
 	return (
+		<>
 		<div>
 		
 			<div className="post-details">
@@ -98,7 +99,8 @@ export default function PostDetailPage({ posts, setPosts, user, setUserPosts, us
 					
 				</div>
 			}
-		</div>
+			</div>
+		</>
 
 	);
 }

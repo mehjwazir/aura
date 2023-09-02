@@ -20,7 +20,7 @@ export default function NavBar({ user, setUser }) {
 
   return <>
     <div className='navbar'>
-      <div className='nav-logo'>AURA</div>
+      <div className='nav-logo' >AURA</div>
       <div className={show ? 'nav-links active' : 'nav-links'}>
         <Link onClick={() => showSwitch()} show={show} to="/">Home</Link>
         <Link onClick={() => showSwitch()} to="/experience">Experience</Link>
@@ -36,6 +36,6 @@ export default function NavBar({ user, setUser }) {
         <span></span>
       </div>
     </div>
-  </>;
-};
+  </>
+}
 

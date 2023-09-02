@@ -14,6 +14,7 @@ export default function DiscoverPage({ posts, setPosts }) {
 	}, [setPosts]);
 
 	return (
+		<>
 		<main>
 			<h1 className="posts-h1">Discover</h1>
 			<div className="container">
@@ -22,6 +23,7 @@ export default function DiscoverPage({ posts, setPosts }) {
 						return <PostCard post={post} key={idx} />;
 					})}
 			</div>
-		</main>
+			</main>
+		</>
 	);
 }

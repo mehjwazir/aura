@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 export default function HomePage({ user, }) {
 
 	return (
+	<>
 		<main className="HomePage">
 			<div className='img-div'>
 				<img className="home-img" src="Aura2.png" alt="" />
@@ -63,6 +64,8 @@ export default function HomePage({ user, }) {
 			<div>
 				<img src="aura-footer.jpg" alt="aura-footer" className='aura-footer' />
 			</div>
-		</main>
+			</main>
+		</>
+	
 	);
 }

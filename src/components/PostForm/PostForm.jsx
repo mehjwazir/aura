@@ -42,6 +42,7 @@ export default function PostForm({ setUserPosts, setPosts, userPosts, posts }) {
 
 
 	return (
+		<>
 		<div>
 			<div>
 				<h1 className='form-title'>Create Experience</h1>
@@ -63,7 +64,8 @@ export default function PostForm({ setUserPosts, setPosts, userPosts, posts }) {
 
 			</div>
 
-		</div>
+			</div>
+		</>
 	);
 }
 

@@ -7,6 +7,7 @@ export default function AuthPage({ setUser }) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
+    <>
     <main>
 
      <div className='authPage'>
@@ -21,6 +22,7 @@ export default function AuthPage({ setUser }) {
         }
         </div>
       </div>
-    </main>
+      </main>
+    </>
   );
 }
